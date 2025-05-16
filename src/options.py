@@ -7,7 +7,8 @@ import argparse
 
 def args_parser():
     parser = argparse.ArgumentParser()
-
+    parser.add_argument('--gpu_id', type=int, default=None, help='GPU id to use')
+    
     # federated arguments (Notation for the arguments followed from paper)
     parser.add_argument('--epochs', type=int, default=10,
                         help="number of rounds of training")
